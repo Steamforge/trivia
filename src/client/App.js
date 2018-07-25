@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { QuestionContext } from './context';
+
 import HomePage from './HomePage';
 import Page from './Page';
 import NotFoundPage from './NotFoundPage';
@@ -27,13 +29,15 @@ export default class App extends Component {
   render() {
     // const { questions } = this.state;
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/page" component={Page} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </BrowserRouter>
+      <QuestionContext.Provider value={this.state.questions}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/page" component={Page} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </BrowserRouter>
+      </QuestionContext.Provider>
     );
   }
 }
