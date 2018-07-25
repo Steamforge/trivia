@@ -1,0 +1,45 @@
+{
+  "name": "trivia",
+  "version": "0.0.1",
+  "description": "A Trivia Game (work in progress)",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "build": "webpack --mode production",
+    "client": "webpack -w",
+    "server": "nodemon src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Josh Studley",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Steamforge/trivia.git"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.6.0",
+    "eslint": "^5.2.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.3",
+    "prop-types": "^15.6.2",
+    "styled-components": "^3.3.3",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
