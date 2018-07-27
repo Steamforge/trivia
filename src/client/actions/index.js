@@ -11,7 +11,7 @@ export function fetchQuestions(url) {
         return fetch(url)
             .then(res => res.json())
             .then((data) => {
-                // console.log('data', data);
+                console.log('data', data);
                 dispatch(fetchQuestionsSuccess(data.results));
                 return data.results;
             })

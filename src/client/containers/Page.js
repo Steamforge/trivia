@@ -16,8 +16,7 @@ class Page extends Component {
     }
 
     componentDidMount() {
-        // const url = 'https://opentdb.com/api.php?amount=10';
-        const url = 'api/mock';
+        const url = 'api/questions/';
         this.props.fetchData(url);
     }
 
