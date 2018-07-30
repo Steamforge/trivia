@@ -22,7 +22,7 @@ class Page extends Component {
 
     render() {
         const { questions } = this.props;
-        console.log(this.props);
+        // console.log(this.props);
 
         return (
             <div>
@@ -41,12 +41,9 @@ Page.propTypes = {
     questions: PropTypes.array,
 };
 
-const mapStateToProps = (state) => {
-    console.log(state);
-    return {
-        questions: state.questions,
-    };
-};
+const mapStateToProps = state => (
+    { questions: state.questions }
+);
 
 const mapDispatchToProps = dispatch => ({
     fetchData: url => dispatch(actions.fetchQuestions(url)),

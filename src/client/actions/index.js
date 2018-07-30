@@ -6,12 +6,12 @@ export const fetchQuestionsSuccess = questions => ({
 });
 
 export function fetchQuestions(url) {
-    console.log('fetchQuestions');
+    // console.log('fetchQuestions');
     return (dispatch) => {
         return fetch(url)
             .then(res => res.json())
             .then((data) => {
-                console.log('data', data);
+                // console.log('data', data);
                 dispatch(fetchQuestionsSuccess(data.results));
                 return data.results;
             })

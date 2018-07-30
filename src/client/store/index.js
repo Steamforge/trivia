@@ -8,7 +8,7 @@ const configureStore = function configureStore(initialState) {
         initialState,
         compose(
             applyMiddleware(thunk),
-            window.devToolsExtension ? window.devToolsExtension() : f => f,
+            window.devToolsExtension ? window.devToolsExtension() : f => f, //eslint-disable-line id-length
         )
     );
 };
